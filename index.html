@@ -34,6 +34,7 @@ p {
 <h1>javascript tutorial</h1>
     <p id="demo"></p>
     <p id="fb"></p>
+    myFunction();
 <script> 
     var text;
     var test = prompt("What is 2 + 2?", "Enter number here");
@@ -49,5 +50,16 @@ p {
             text="wrong answer, try again!";
     }
     document.getElementById("fb").innerHTML = text;
+    
+    function myFunction() {
+        if(text == "correct!") {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "congrats.png");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "congrats");
+        document.body.appendChild(x);
+        }
+    }
     </script>
 </body>
