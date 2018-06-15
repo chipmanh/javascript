@@ -33,8 +33,21 @@ p {
 <body>
 <h1>javascript tutorial</h1>
     <p id="demo"></p>
+    <p id="fb"></p>
 <script> 
+    var text;
     var test = prompt("What is 2 + 2?", "Enter number here");
     document.getElementById("demo").innerHTML = test;
+    switch(test) {
+        case "2":
+            text="correct!";
+            break;
+        case "3":
+            text="close! try using your fingers to help you count";
+            break;
+        default:
+            text="wrong answer, try again!";
+    }
+    document.getElementById("fb").innerHTML = text;
     </script>
 </body>
